@@ -1,0 +1,27 @@
+{
+  "name": "RoadAccidents021_x264.mp4",
+  "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4",
+  "model": "merged_openjev",
+  "fps": 30.0,
+  "n_frames": 155,
+  "source_sha256": "4a082bece78c225e290e031cc27a6fde9c071a3c134ea46ae9df83a505b24305",
+  "canonical_sha256": "c3742e39c9b52474c2771972d62a1ffe1b365af4c9876d3ced1434f0c010f540",
+  "start_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scores": [
+    -3.052386522293091,
+    -2.905531883239746,
+    -1.7535771131515503,
+    -2.9356443881988525,
+    -3.1685848236083984,
+    -3.6307718753814697
+  ],
+  "score_type": "jev_scalar_logit",
+  "temperature": 1.518796342858676
+}

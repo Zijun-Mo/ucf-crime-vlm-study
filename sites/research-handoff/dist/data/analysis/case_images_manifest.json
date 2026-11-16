@@ -1,0 +1,270 @@
+{
+  "source": "pinned224x224 2fps canonical model inputs, not full-resolution source videos",
+  "selector": "8 uniform points, first/last annotation boundaries +/-1s, and zero-shot/V4 highest-score window centers; nearest canonical frame",
+  "cases": [
+    {
+      "name": "Explosion027_x264.mp4",
+      "role": "worst",
+      "image": "Explosion027_x264.mp4.jpg",
+      "image_sha256": "93ee7fec26e84a65744e66c118b9d92e9936b970df757b6e667ab7dd8b0eee13",
+      "source_sha256": "2d18e88f0645d29db05bc53755fe4ca247ea9eab889726d2c5ebef4b5335b2b2",
+      "canonical_sha256": "a24a4f45d46420c25e34c8a0fa6b92649a4de10b116ed9834c221a2a39c8fa13",
+      "sampled_frames": [
+        {
+          "canonical_frame": 0,
+          "time_s": 0.0,
+          "original_frame": 1,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 5,
+          "time_s": 2.5,
+          "original_frame": 76,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 7,
+          "time_s": 3.5,
+          "original_frame": 106,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 9,
+          "time_s": 4.5,
+          "original_frame": 136,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 10,
+          "time_s": 5.0,
+          "original_frame": 151,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 12,
+          "time_s": 6.0,
+          "original_frame": 181,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 14,
+          "time_s": 7.0,
+          "original_frame": 211,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 22,
+          "time_s": 11.0,
+          "original_frame": 331,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 29,
+          "time_s": 14.5,
+          "original_frame": 436,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 32,
+          "time_s": 16.0,
+          "original_frame": 481,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 36,
+          "time_s": 18.0,
+          "original_frame": 541,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 43,
+          "time_s": 21.5,
+          "original_frame": 646,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 51,
+          "time_s": 25.5,
+          "original_frame": 766,
+          "benchmark_anomaly": false
+        }
+      ]
+    },
+    {
+      "name": "Explosion043_x264.mp4",
+      "role": "median",
+      "image": "Explosion043_x264.mp4.jpg",
+      "image_sha256": "c7bca22d7fb4f842bfdc83959918904bfeb155fb5de3319cc8cc8f0d64f4ba92",
+      "source_sha256": "2d771d5ff1faadfcc228638c037e40395e0d0e40fac205a6614f5e55638aec7c",
+      "canonical_sha256": "4ca7a5390935bf0c41d77e67e64e8b3a3f307bf51d0e3ed192563c00bff88be7",
+      "sampled_frames": [
+        {
+          "canonical_frame": 0,
+          "time_s": 0.0,
+          "original_frame": 1,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 52,
+          "time_s": 26.0,
+          "original_frame": 781,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 73,
+          "time_s": 36.5,
+          "original_frame": 1096,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 145,
+          "time_s": 72.5,
+          "original_frame": 2176,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 218,
+          "time_s": 109.0,
+          "original_frame": 3271,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 291,
+          "time_s": 145.5,
+          "original_frame": 4366,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 295,
+          "time_s": 147.5,
+          "original_frame": 4426,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 298,
+          "time_s": 149.0,
+          "original_frame": 4471,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 299,
+          "time_s": 149.5,
+          "original_frame": 4486,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 305,
+          "time_s": 152.5,
+          "original_frame": 4576,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 309,
+          "time_s": 154.5,
+          "original_frame": 4636,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 363,
+          "time_s": 181.5,
+          "original_frame": 5446,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 436,
+          "time_s": 218.0,
+          "original_frame": 6541,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 509,
+          "time_s": 254.5,
+          "original_frame": 7636,
+          "benchmark_anomaly": false
+        }
+      ]
+    },
+    {
+      "name": "Arson011_x264.mp4",
+      "role": "best",
+      "image": "Arson011_x264.mp4.jpg",
+      "image_sha256": "5e3013e9d6b5b80dc46d183b536989da21d04ea1545cbd4744d749372f0b670b",
+      "source_sha256": "fab1aab3fde69c4ea4cea5cfc77ad3ecb60245cac02307f474f4d64649f65819",
+      "canonical_sha256": "15822e4f0dfc7340f05e2f6ca07f02636584d4cd796c83be22f4338e0c586b7e",
+      "sampled_frames": [
+        {
+          "canonical_frame": 0,
+          "time_s": 0.0,
+          "original_frame": 1,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 8,
+          "time_s": 4.0,
+          "original_frame": 121,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 12,
+          "time_s": 6.0,
+          "original_frame": 181,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 24,
+          "time_s": 12.0,
+          "original_frame": 361,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 30,
+          "time_s": 15.0,
+          "original_frame": 451,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 36,
+          "time_s": 18.0,
+          "original_frame": 541,
+          "benchmark_anomaly": false
+        },
+        {
+          "canonical_frame": 48,
+          "time_s": 24.0,
+          "original_frame": 721,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 60,
+          "time_s": 30.0,
+          "original_frame": 901,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 71,
+          "time_s": 35.5,
+          "original_frame": 1066,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 82,
+          "time_s": 41.0,
+          "original_frame": 1231,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 83,
+          "time_s": 41.5,
+          "original_frame": 1246,
+          "benchmark_anomaly": true
+        },
+        {
+          "canonical_frame": 84,
+          "time_s": 42.0,
+          "original_frame": 1261,
+          "benchmark_anomaly": true
+        }
+      ]
+    }
+  ]
+}

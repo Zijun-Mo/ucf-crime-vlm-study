@@ -1,0 +1,29 @@
+{
+  "name": "Normal_Videos_345_x264.mp4",
+  "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4",
+  "model": "merged_openjev",
+  "fps": 30.0,
+  "n_frames": 209,
+  "source_sha256": "1ac537cb6c49303d705f455f78a6379f7fa8eab571a4fbae5a9dc1550b49df14",
+  "canonical_sha256": "da52e5acc5501895d77f236404509c691b4b128e466cd322c43dc49356a13738",
+  "start_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "scores": [
+    -3.935805559158325,
+    -4.284238338470459,
+    -4.317881107330322,
+    -4.503207206726074,
+    -4.239712238311768,
+    -4.255930423736572,
+    -4.469523906707764
+  ],
+  "score_type": "jev_scalar_logit",
+  "temperature": 1.518796342858676
+}

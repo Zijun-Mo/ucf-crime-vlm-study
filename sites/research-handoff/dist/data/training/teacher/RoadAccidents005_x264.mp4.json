@@ -1,0 +1,18 @@
+{
+  "name": "RoadAccidents005_x264.mp4",
+  "source_sha256": "656a7c07b64e80928bcfd5a4d3779d19c41f8d2a2def5e73d7670dcf9a8b90a2",
+  "fingerprint": "cebb5894edaa948c1767cd44e25287bb4aa245026caf7175f62205a482e6fc6b",
+  "windows": 8,
+  "logits": [
+    -0.5009021759033203,
+    -0.9218826293945312,
+    -0.84674072265625,
+    -1.598196029663086,
+    -2.1394100189208984,
+    -2.3224658966064453,
+    -1.919137954711914,
+    -2.1167945861816406
+  ],
+  "seconds": 0.2501380443572998,
+  "teacher": "pinned_zero_shot_adapter_disabled"
+}

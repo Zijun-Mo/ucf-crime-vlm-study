@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "name": "qwen_localization_teacher_v1",
+  "train_manifest_sha256": "ae491a4569ad9367ac07cfdee776a0c845087d806f5bb51afb056963383e7182",
+  "training_metadata_bundle_sha256": "a8eef47ab5b8123d67840c9812d0f9029cce7394d5c0796fa97ab3f3349accfb",
+  "initialization": "fresh native Qwen 2B rank8 LoRA; never initialize from earlier MIL",
+  "backbone_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "input": {
+    "prompt": "P1",
+    "duration": 4,
+    "stride": 1,
+    "exhaustive": true,
+    "batch": 4
+  },
+  "teacher": {
+    "identity": "same pinned native Qwen with LoRA disabled",
+    "frozen": true,
+    "cache_once": true
+  },
+  "selection": {
+    "normal_quantile": 0.99,
+    "bic_gain": 10.0,
+    "min_cluster_gap": 0.5,
+    "soft_coverage_fraction": 0.25,
+    "rank_anchors": 32,
+    "rank_margin": 0.5
+  },
+  "loss": {
+    "positive_weight": 1.0,
+    "rank_weight": 1.0,
+    "normal": "all-window BCE, video mean",
+    "positive": "teacher-gated BCE, mean within connected segments then mean across segments",
+    "rank": "teacher-gap hinge, retain 0.5 of confident teacher pair gaps",
+    "normalization": "equal total class mass; each train video once per epoch"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 5e-06,
+    "weight_decay": 0.01,
+    "clip_grad_norm": 1.0
+  },
+  "training": {
+    "max_epochs": 6,
+    "min_epochs": 2,
+    "patience": 2,
+    "min_delta": 0.002,
+    "videos_per_step": 8,
+    "seed": 42,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0
+  },
+  "validation": {
+    "split": "val",
+    "selection": "highest real-dev within macro AUROC with video max AP >= zero-shot validation AP; zero shot epoch0 eligible",
+    "annotations": "research/localization_v1/dev_annotations.json",
+    "requires_reviewed_temporal_labels": true
+  },
+  "resources": {
+    "allocation_minutes": 720,
+    "training_cu_budget": 120,
+    "reserve_cu": 10,
+    "profile_before_teacher": true
+  },
+  "notes": [
+    "new exploratory protocol; old formal results immutable",
+    "fixed 6-epoch ceiling is a budget, not evidence of convergence",
+    "short-video-biased dev selection documented in annotation artifact",
+    "selection BIC, normal 99th percentile and 25% soft coverage are preregistered initial choices, not validated optima",
+    "teacher ranks and threshold calibration never use temporal dev labels; those only select/stop checkpoints"
+  ],
+  "execution": {
+    "attention_backend": "math",
+    "gradient_checkpointing": false
+  }
+}

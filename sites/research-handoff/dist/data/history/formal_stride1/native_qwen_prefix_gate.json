@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 0,
+      "logit_delta": 0.00609588623046875,
+      "probability_delta": 0.0012378990650177002
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 1,
+      "logit_delta": 0.014780044555664062,
+      "probability_delta": 0.0031901299953460693
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 44,
+      "logit_delta": 0.014556884765625,
+      "probability_delta": 0.00020602624863386154
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 47,
+      "logit_delta": 0.011148452758789062,
+      "probability_delta": 0.00020820274949073792
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 0,
+      "logit_delta": 0.02014923095703125,
+      "probability_delta": 0.0047619640827178955
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 1,
+      "logit_delta": 0.01073455810546875,
+      "probability_delta": 0.0025322437286376953
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 21,
+      "logit_delta": 0.00904083251953125,
+      "probability_delta": 0.0020984113216400146
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 24,
+      "logit_delta": 0.00536346435546875,
+      "probability_delta": 0.00021391361951828003
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 0,
+      "logit_delta": 0.03200531005859375,
+      "probability_delta": 0.0010966360569000244
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 1,
+      "logit_delta": 0.011793136596679688,
+      "probability_delta": 0.00020509958267211914
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 4,
+      "logit_delta": 0.00453948974609375,
+      "probability_delta": 0.00016234442591667175
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 7,
+      "logit_delta": 0.0006771087646484375,
+      "probability_delta": 7.295981049537659e-06
+    }
+  ],
+  "logit_tolerance": 0.08,
+  "probability_tolerance": 0.01,
+  "uses_test_labels": false
+}

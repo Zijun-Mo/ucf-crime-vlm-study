@@ -1,0 +1,33 @@
+{
+  "name": "RoadAccidents017_x264.mp4",
+  "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4",
+  "model": "native_qwen",
+  "fps": 30.0,
+  "n_frames": 243,
+  "source_sha256": "b36e5f36aa284e68342e8f78f2db18adbf7559d08c2684bfd37d24379cb20208",
+  "canonical_sha256": "667756ed8e6d5e2a27afa6fd87ba1f76a43400e5f382df5db8b8fe59196ae284",
+  "start_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "scores": [
+    0.032527923583984375,
+    0.7896862030029297,
+    0.5973072052001953,
+    0.21419715881347656,
+    -0.2745170593261719,
+    -0.8859729766845703,
+    -2.1502552032470703,
+    -1.8972301483154297,
+    -1.826528549194336
+  ],
+  "score_type": "yes_minus_no_logit",
+  "temperature": 1
+}

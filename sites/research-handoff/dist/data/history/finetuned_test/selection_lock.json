@@ -1,0 +1,17 @@
+{
+  "checkpoints": {
+    "A": "a3e8fd4f146507823b42caffb6d2c849ee4dbf5caaa48c4b99ebf2a6843db6a2",
+    "B": "bdd9b430d980db91d32313686c5537e4f7fd8c29af02d65f873886a2b199ff43"
+  },
+  "calibration": {
+    "A": {
+      "temperature": 1.0,
+      "calibration_performed": false
+    },
+    "B": {
+      "temperature": 1.0,
+      "calibration_performed": false
+    }
+  },
+  "sha256": "115245fa17317ccc9662f4f7549f4ea897fe4af796953a2e1f57b67e20b722ba"
+}

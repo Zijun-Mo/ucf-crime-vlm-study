@@ -1,0 +1,2 @@
+# Preserve the bytes covered by the frozen scientific SHA-256 manifest.
+sites/research-handoff/dist/** -text

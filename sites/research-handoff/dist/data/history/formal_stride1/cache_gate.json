@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 0,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.453125,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 1,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.1875,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 44,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.9765625,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Abuse028_x264.mp4",
+      "start_s": 47,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.87109375,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 0,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 4.50390625,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 1,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 4.50390625,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 21,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 4.4765625,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Arson009_x264.mp4",
+      "start_s": 24,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 4.44921875,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 0,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.7109375,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 1,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.7109375,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 4,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.86328125,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    },
+    {
+      "video": "Normal_Videos_881_x264.mp4",
+      "start_s": 7,
+      "max_feature_abs_diff": 0.0,
+      "pixel_values_identical": true,
+      "max_feature_magnitude": 5.90234375,
+      "native_logit_diff": 0.0,
+      "native_probability_diff": 0.0
+    }
+  ],
+  "scope": "same canonical decoded pixels; independent temporal-patch vision features vs full window; FP16 numerical tolerance; no labels used",
+  "preprocess": "sequential source decoding; frames 0,15,30,...; OpenCV INTER_AREA 224x224; one canonical full-video mp4v 2fps round-trip with extra original-last-frame for tail padding; all windows use same canonical frames"
+}

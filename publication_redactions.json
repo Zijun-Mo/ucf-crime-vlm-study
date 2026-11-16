@@ -1,0 +1,26 @@
+{
+  "changed_files": {
+    "scripts/observe_formal_training.py": "private configuration or personal path replaced",
+    "scripts/monitor_localization_events.py": "private configuration or personal path replaced",
+    "scripts/probe_colab_control.py": "private configuration or personal path replaced",
+    "scripts/prepare_localization_cache_bundle.py": "private configuration or personal path replaced",
+    "scripts/launch_transfer_probe.py": "private configuration or personal path replaced",
+    "scripts/launch_gpu_preflight.py": "private configuration or personal path replaced",
+    "scripts/audit_formal_validation.py": "private configuration or personal path replaced",
+    "scripts/recover_controlled_scores.py": "private configuration or personal path replaced",
+    "scripts/prepare_v4_case_frames.py": "private configuration or personal path replaced",
+    "scripts/launch_localization_test.py": "private configuration or personal path replaced",
+    "scripts/profile_localization_gpu.py": "private configuration or personal path replaced",
+    "scripts/summarize_localization_trial.py": "private configuration or personal path replaced",
+    "scripts/launch_study_job.py": "private configuration or personal path replaced",
+    "scripts/test_trial_publication_live.py": "private configuration or personal path replaced",
+    "scripts/finalize_localization_test.py": "private configuration or personal path replaced",
+    "scripts/run_remaining_queue.py": "private configuration or personal path replaced",
+    "scripts/launch_storyboard_experiment.py": "private configuration or personal path replaced",
+    "scripts/poll_colab_capacity.py": "private configuration or personal path replaced",
+    "research/run_optional_cache_probe.py": "private configuration or personal path replaced"
+  },
+  "original_history_included": false,
+  "original_hosting_identity_included": false,
+  "scientific_predictions_modified": false
+}

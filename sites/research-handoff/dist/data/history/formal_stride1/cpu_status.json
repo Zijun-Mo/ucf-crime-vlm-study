@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "stage": "ready",
+  "started": 1791724344.6444197,
+  "prepared": 290,
+  "total": 290,
+  "errors": [],
+  "elapsed_s": 992.2800135612488,
+  "canonical_bytes": 214694701,
+  "windows": 37188,
+  "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4",
+  "audit_completed": 1791725344.4882858
+}

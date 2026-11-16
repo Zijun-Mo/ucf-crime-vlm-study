@@ -1,0 +1,35 @@
+{
+  "stage": "recovering",
+  "started": 1791824288.2901368,
+  "status": "error",
+  "generated": 76,
+  "existing": 182,
+  "gpu": "NVIDIA L4",
+  "torch": "2.11.0+cu130",
+  "elapsed_s": 420.08096170425415,
+  "missing_videos": 108,
+  "missing_windows": 16886,
+  "gate": {
+    "method": "16 temporal pairs plus exact partial-tail batches",
+    "checks": [
+      {
+        "video": "Arson018_x264.mp4",
+        "windows": 29,
+        "bit_identical": true
+      },
+      {
+        "video": "Burglary092_x264.mp4",
+        "windows": 21,
+        "bit_identical": true
+      },
+      {
+        "video": "Explosion021_x264.mp4",
+        "windows": 27,
+        "bit_identical": true
+      }
+    ],
+    "bit_identical": true
+  },
+  "video": "Normal_Videos_935_x264.mp4",
+  "error": "Traceback (most recent call last):\n  File \"/content/drive/MyDrive/OpenJev_UCFCrime/weak_dss_learning_10cu_v1/recover_visual_cache.py\", line 87, in <module>\n    f=build_visual(r)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File \"/content/drive/MyDrive/OpenJev_UCFCrime/weak_dss_learning_10cu_v1/recover_visual_cache.py\", line 57, in build_visual\n    guard();batch=[np.stack([frames[min(2*j,valid)],frames[min(2*j+1,valid)]]) for j in range(offset,min(n+1,offset+16))]\n    ~~~~~^^\n  File \"/content/drive/MyDrive/OpenJev_UCFCrime/weak_dss_learning_10cu_v1/recover_visual_cache.py\", line 12, in guard\n    if time.time()>DEADLINE-60:raise TimeoutError('Visual recovery reserve reached; partial cache remains safely in Drive')\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: Visual recovery reserve reached; partial cache remains safely in Drive\n"
+}

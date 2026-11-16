@@ -1,0 +1,15 @@
+{
+  "same_trajectory": true,
+  "initial_policy_epoch_cap": 4,
+  "user_authorized_extensions_superseded_initial_cap": true,
+  "completed_epochs": 9,
+  "selected_epoch": 9,
+  "optimizer_updates": 1413,
+  "resume_step": 806,
+  "added_updates": 607,
+  "final_unvalidated_tail": 0,
+  "stop": "two consecutive qualified development AUROC improvements below0.002",
+  "last_extension_limit_cu": 20,
+  "phase_limit_cu": 100,
+  "no_loss_or_sampling_changes_on_resume": true
+}

@@ -1,0 +1,23 @@
+{
+  "tests": {
+    "passed": 187,
+    "warnings": 1,
+    "gpu_used": false
+  },
+  "public_file_manifest": {
+    "passed": true,
+    "files": 4231
+  },
+  "formal_metric_recomputation": {
+    "conditions": 18,
+    "max_point_error": 0.0,
+    "bootstrap_recomputed_for_publication": false
+  },
+  "scientific_artifacts_preserved": 47,
+  "privacy_pattern_scan": {
+    "passed": true,
+    "findings": 0,
+    "scope": "public tracked text files; credential, personal identifier, private resource patterns"
+  },
+  "source_history": "new clean snapshot; original history excluded"
+}

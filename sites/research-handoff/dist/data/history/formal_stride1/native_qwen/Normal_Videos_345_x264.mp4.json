@@ -1,0 +1,29 @@
+{
+  "name": "Normal_Videos_345_x264.mp4",
+  "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4",
+  "model": "native_qwen",
+  "fps": 30.0,
+  "n_frames": 209,
+  "source_sha256": "1ac537cb6c49303d705f455f78a6379f7fa8eab571a4fbae5a9dc1550b49df14",
+  "canonical_sha256": "da52e5acc5501895d77f236404509c691b4b128e466cd322c43dc49356a13738",
+  "start_s": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "scores": [
+    -3.4119720458984375,
+    -3.535879135131836,
+    -3.2239761352539062,
+    -3.0962963104248047,
+    -2.8261280059814453,
+    -3.1101417541503906,
+    -3.2146778106689453
+  ],
+  "score_type": "yes_minus_no_logit",
+  "temperature": 1
+}

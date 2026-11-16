@@ -1,0 +1,14 @@
+{
+  "name": "RoadAccidents065_x264.mp4",
+  "source_sha256": "044db801da0c1b958ed6d1b3f6774903362849462b65465d80e3dd4249698098",
+  "fingerprint": "cebb5894edaa948c1767cd44e25287bb4aa245026caf7175f62205a482e6fc6b",
+  "windows": 4,
+  "logits": [
+    -0.0872344970703125,
+    -0.029230117797851562,
+    -0.045154571533203125,
+    -0.3598480224609375
+  ],
+  "seconds": 0.12778782844543457,
+  "teacher": "pinned_zero_shot_adapter_disabled"
+}

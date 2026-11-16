@@ -1,0 +1,29 @@
+{
+  "name": "Assault018_x264.mp4",
+  "source_sha256": "356a959dd9be5eca3b737e21209a73cc0a202e10fa02f22e0a7e142cf9e7013a",
+  "fingerprint": "cebb5894edaa948c1767cd44e25287bb4aa245026caf7175f62205a482e6fc6b",
+  "windows": 13,
+  "logits": [
+    0.9924983978271484,
+    1.2261695861816406,
+    0.9453678131103516,
+    -0.10105323791503906,
+    -0.1495532989501953,
+    0.21185874938964844,
+    -0.2911510467529297,
+    -0.6716861724853516,
+    -0.8827838897705078,
+    -0.23088455200195312,
+    0.7345447540283203,
+    0.8679847717285156,
+    -3.7817420959472656
+  ],
+  "seconds": 0.48705554008483887,
+  "teacher": "pinned_zero_shot_adapter_disabled",
+  "imported_from": {
+    "protocol": "localization_v1",
+    "fingerprint": "c49ee1c78cc691ba2340e54ffc4d4f4439062676503207a14de1ecb1ff65d0b4",
+    "source_json_sha256": "d441176cb518fe29dc67d0bc5ea6bc8f3e6a53cd8e5da90f8c8aea4ce9fcba3d",
+    "values_unchanged": true
+  }
+}

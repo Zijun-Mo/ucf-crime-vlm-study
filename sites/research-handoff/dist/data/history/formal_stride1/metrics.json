@@ -1,0 +1,234 @@
+{
+  "config": {
+    "manifest": {
+      "videos": 290,
+      "frames": 1111808,
+      "windows": 9399,
+      "bytes": 7988909023,
+      "repo_revision": "8d783bb55269300114f9773a3c068b48a4940e4a",
+      "annotation_sha256": "3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c",
+      "elapsed_s": 42.30799412727356,
+      "ram_gib": 12.671417236328125
+    },
+    "prompt": "Context:\nThis is surveillance footage. Judge only the visible events, considering the scene and temporal order.\n\nQuestion: Does this video segment contain a clearly unusual or abnormal event compared with ordinary activity in the scene? Judge observable actions rather than camera shake or compression artifacts.\nYes means: An observable abnormal event occurs.\nNo means: Only normal activity is visible.\nIs the answer to this question yes? Answer Yes or No.",
+    "base": "/content/drive/MyDrive/OpenJev_UCFCrime/models/base/15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "merged": "/content/drive/MyDrive/OpenJev_UCFCrime/models/openjev_merged/0c7aa498b1627be8da4acf34c863ff0ee0a92785_fp16",
+    "dtype": "fp16",
+    "batch": 4,
+    "window_seconds": 4,
+    "strides": [
+      1,
+      2,
+      4
+    ],
+    "sample_fps": 2,
+    "preprocess": "sequential source decoding; frames 0,15,30,...; OpenCV INTER_AREA 224x224; one canonical full-video mp4v 2fps round-trip with extra original-last-frame for tail padding; all windows use same canonical frames",
+    "source_indexing": "0-based sampled source frames; labels 1-based inclusive",
+    "aggregation": "mean raw logits of covering selected windows; no smoothing",
+    "visual_cache": "independent temporal patch pairs; original vision encoder shared; gate before full feature extraction",
+    "cpu_started": 1791724344.6444197,
+    "cpu_finished": 1791725336.9125547,
+    "preprocessing_versions": {
+      "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+      "opencv": "5.0.0",
+      "numpy": "2.1.3",
+      "huggingface_hub": "1.33.0"
+    },
+    "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+  },
+  "metrics": [
+    {
+      "model": "native_qwen",
+      "stride_s": 1,
+      "window_s": 4,
+      "windows": 37188,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.8039000387866264,
+      "average_precision": 0.370680126057304,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    },
+    {
+      "model": "native_qwen",
+      "stride_s": 2,
+      "window_s": 4,
+      "windows": 18668,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.8022033392313563,
+      "average_precision": 0.36386604742866474,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    },
+    {
+      "model": "native_qwen",
+      "stride_s": 4,
+      "window_s": 4,
+      "windows": 9399,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.78868481536377,
+      "average_precision": 0.3407464615672192,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    },
+    {
+      "model": "merged_openjev",
+      "stride_s": 1,
+      "window_s": 4,
+      "windows": 37188,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.8084685740845942,
+      "average_precision": 0.3439535419473332,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    },
+    {
+      "model": "merged_openjev",
+      "stride_s": 2,
+      "window_s": 4,
+      "windows": 18668,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.8050292874800837,
+      "average_precision": 0.3351204584486933,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    },
+    {
+      "model": "merged_openjev",
+      "stride_s": 4,
+      "window_s": 4,
+      "windows": 9399,
+      "videos": 290,
+      "frames": 1111808,
+      "positive_frames": 84338,
+      "auroc": 0.7930737059760109,
+      "average_precision": 0.31007246012271117,
+      "aggregation": "mean raw logits",
+      "fingerprint": "f04baf8d2e0331a33dd033f73cc182264c26082aee5161759dbcacf83320f6a4"
+    }
+  ],
+  "cache_gate": {
+    "passed": true,
+    "checks": [
+      {
+        "video": "Abuse028_x264.mp4",
+        "start_s": 0,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.453125,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Abuse028_x264.mp4",
+        "start_s": 1,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.1875,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Abuse028_x264.mp4",
+        "start_s": 44,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.9765625,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Abuse028_x264.mp4",
+        "start_s": 47,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.87109375,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Arson009_x264.mp4",
+        "start_s": 0,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 4.50390625,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Arson009_x264.mp4",
+        "start_s": 1,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 4.50390625,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Arson009_x264.mp4",
+        "start_s": 21,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 4.4765625,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Arson009_x264.mp4",
+        "start_s": 24,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 4.44921875,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Normal_Videos_881_x264.mp4",
+        "start_s": 0,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.7109375,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Normal_Videos_881_x264.mp4",
+        "start_s": 1,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.7109375,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Normal_Videos_881_x264.mp4",
+        "start_s": 4,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.86328125,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      },
+      {
+        "video": "Normal_Videos_881_x264.mp4",
+        "start_s": 7,
+        "max_feature_abs_diff": 0.0,
+        "pixel_values_identical": true,
+        "max_feature_magnitude": 5.90234375,
+        "native_logit_diff": 0.0,
+        "native_probability_diff": 0.0
+      }
+    ],
+    "scope": "same canonical decoded pixels; independent temporal-patch vision features vs full window; FP16 numerical tolerance; no labels used",
+    "preprocess": "sequential source decoding; frames 0,15,30,...; OpenCV INTER_AREA 224x224; one canonical full-video mp4v 2fps round-trip with extra original-last-frame for tail padding; all windows use same canonical frames"
+  }
+}

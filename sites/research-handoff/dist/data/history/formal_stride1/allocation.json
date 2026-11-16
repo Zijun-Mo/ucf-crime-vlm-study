@@ -1,0 +1,6 @@
+{
+  "gpu_allocation_requested": 1791725414.6599967,
+  "gpu_deadline": 1791730514.6599967,
+  "gpu_rate_cu_h": 1.54,
+  "total_budget_limit_cu": 2.5
+}

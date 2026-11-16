@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "frozen_at_utc": "2026-11-09T12:31:22.132587+00:00",
+  "reason": "User requested formal training with convergence evidence rather than a single epoch",
+  "inference_protocol_sha256": "fa177275b1b86c476be78befdf69f12900193b7f2632516a7034750b266dec9b",
+  "train_manifest_sha256": "ae491a4569ad9367ac07cfdee776a0c845087d806f5bb51afb056963383e7182",
+  "branches": [
+    "qwen",
+    "openjev"
+  ],
+  "initialization": {
+    "qwen": "fresh rank-8 LoRA on the pinned native base; original frozen Yes/No readout",
+    "openjev": "published decision adapter and scalar head; not the historical MIL checkpoint"
+  },
+  "selection": {
+    "metric": "validation video-max AP",
+    "min_delta": 0.002,
+    "patience": 3,
+    "min_epochs": 3,
+    "best_checkpoint": "highest validation AP among trained epochs; earliest tie",
+    "meaning": "no validation AP improvement exceeding min_delta under the frozen rule; not a global optimum or statistical significance test"
+  },
+  "epoch_budget": {
+    "initial": 10,
+    "extension_block": 5,
+    "limit_is_not_convergence": true,
+    "extension_requires": "inspect validation curve and remaining credits; keep stopping rule unchanged"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lora_lr": 1e-05,
+    "scalar_head_lr": 0.0001,
+    "weight_decay": 0.01,
+    "clip_grad_norm": 1.0,
+    "schedule": "constant, matching the fixed-budget baseline"
+  },
+  "training": {
+    "steps_per_epoch": 160,
+    "bags_per_step": 8,
+    "windows_per_bag_max": 16,
+    "seed": 42,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "dtype": "bf16",
+    "physical_lm_batch": 4,
+    "prefix_cache": false
+  },
+  "validation": {
+    "split": "val",
+    "videos": 163,
+    "frequency": "after every complete epoch",
+    "aggregation": "maximum raw window logit; AP is invariant under sigmoid",
+    "partial_validation_reusable_only_for": "same epoch, manifest, model-state digest and protocol"
+  },
+  "feature_policy": {
+    "encoder": "same frozen 2B vision backbone for both arms",
+    "representation": "Original contiguous16-pair vision batches; strict train-fixture full-window gate plus byte-identical streaming-input gate",
+    "reuse": "Compute requested training pair groups once in immutable <=1024-pair shards; share across both branches and epochs",
+    "validation": "All windows retained; bounded4-window views and at most2 mapped shards; no full-window expansion"
+  },
+  "checkpoints": {
+    "resume": "two generations, data before status commit, per-arm optimizer and RNG",
+    "epoch1": "save as fixed-budget baseline",
+    "best": "separate from latest optimizer state"
+  },
+  "test_policy": "No test metric in stopping or model selection. Evaluate only frozen selected checkpoints.",
+  "legacy_policy": "Original protocol and one-epoch historical checkpoints stay immutable; they do not certify convergence.",
+  "implementation_amendment": {
+    "before_first_formal_training": true,
+    "previous_freeze_utc": "2026-11-09T09:03:47.424693+00:00",
+    "reason": "Requested credit economy and measured32551-window validation memory footprint; preserve exact original16-pair physical batches",
+    "evidence": "research/stream_input_probe_result.json",
+    "no_optimizer_or_stopping_change": true
+  },
+  "training_metadata_bundle_sha256": "a8eef47ab5b8123d67840c9812d0f9029cce7394d5c0796fa97ab3f3349accfb"
+}

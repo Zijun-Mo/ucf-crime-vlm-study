@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "frozen_at_utc": "2026-11-09T04:49:31.308592+00:00",
+  "starting_commit": "78e4846",
+  "scope": [
+    "A: matched 2B Qwen/Open-Jev x zero-shot/MIL",
+    "B: Qwen/Open-Jev 2B x P1/P2/P3",
+    "C: Qwen 2B/9B; 27B resource-gated optional in proposal",
+    "duration: 2/4/8 seconds with fixed stride=1 and sampling=2fps",
+    "dual-level metrics, paired video bootstrap, category/case/cost figures"
+  ],
+  "prompts": {
+    "P1": "Context:\nThis is surveillance footage. Judge only the visible events, considering the scene and temporal order.\n\nQuestion: Does this video segment contain a clearly unusual or abnormal event compared with ordinary activity in the scene? Judge observable actions rather than camera shake or compression artifacts.\nYes means: An observable abnormal event occurs.\nNo means: Only normal activity is visible.\nIs the answer to this question yes? Answer Yes or No.",
+    "P2": "Context:\nThis is surveillance footage. Judge only observable events, rather than camera shake or compression artifacts. Consider what normal and safe activity would look like in this particular scene. Account for the setting and interactions; unusual appearance alone is insufficient.\n\nQuestion: Does this video segment show an observable action or event that violates the normal or safe activity expected in the visible scene?\nYes means: An observable abnormal event occurs.\nNo means: Only normal activity is visible.\nIs the answer to this question yes? Answer Yes or No.\n",
+    "P3": "Context:\nThis is surveillance footage. Judge only observable events, rather than camera shake or compression artifacts. Follow concrete actions and their changes over time. Attend to person-person and person-object interactions, sudden movements, physical conflict, impacts, fire, theft-like actions, and their visible consequences. Do not infer unseen events or intent.\n\nQuestion: Do these visible actions and temporal cues show a clearly abnormal event in this video segment?\nYes means: An observable abnormal event occurs.\nNo means: Only normal activity is visible.\nIs the answer to this question yes? Answer Yes or No.\n"
+  },
+  "test_manifest_sha256": "6653419c01c81ac230ef138f0f5ce51025b780da777a3827fdfb25af82213a82",
+  "train_manifest_sha256": "ae491a4569ad9367ac07cfdee776a0c845087d806f5bb51afb056963383e7182",
+  "evaluation": {
+    "video_primary": "AUROC of max window raw logit",
+    "video_secondary": "AP, mean raw logit and mean top-ceil(N/8) raw logits sensitivity",
+    "within_primary": "unweighted mean per-video frame AUROC on fixed mixed-label video set",
+    "within_secondary": "macro AP on same set",
+    "pooled": "frame AUROC and AP, mean raw logits over covering windows",
+    "bootstrap": 1000,
+    "seed": 42,
+    "resampling": "same 290-video resampling multiplicities for every method; within macro uses only fixed eligible videos appearing in each replicate",
+    "label_bounds": "1-based inclusive, clipped at real last frame"
+  },
+  "controlled_gpu": {
+    "dtype": "bf16",
+    "prefix_cache": false,
+    "batch": 4,
+    "window_seconds": 4,
+    "sample_fps": 2,
+    "size": 224,
+    "seed": 42,
+    "training_epochs": 1,
+    "training_steps": 160,
+    "training_bags_per_step": 8,
+    "windows_per_bag": 16,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0,
+    "lora_lr": 1e-05,
+    "jev_head_lr": 0.0001,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "qwen_readout": "Yes minus No token logits, frozen original lm_head",
+    "jev_readout": "published scalar head; trainable only in MIL arm"
+  },
+  "cost_policy": {
+    "initial_balance_cu": 61.98,
+    "initial_total_soft_target_cu": 15,
+    "purpose": "planning target, not user-imposed hard budget; revise using measured trial costs before committing longer allocations",
+    "gpu_sessions": "serial; hard-stop watchdog plus controller cleanup; outputs/checkpoints persisted before release",
+    "probe_max_gpu_minutes": 15,
+    "no_test_label_selection": true,
+    "reuse": "only caches matching model revision, dtype, preprocess, frames and numerical gate",
+    "27B_gate": "estimate credits and memory from 9B trial before deciding optional run; retain required 9B full test"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "name": "qwen_localization_pointwise_focal_v3",
+  "train_manifest_sha256": "ae491a4569ad9367ac07cfdee776a0c845087d806f5bb51afb056963383e7182",
+  "training_metadata_bundle_sha256": "a8eef47ab5b8123d67840c9812d0f9029cce7394d5c0796fa97ab3f3349accfb",
+  "initialization": "fresh native Qwen 2B rank8 LoRA; never initialize from earlier MIL",
+  "backbone_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "input": {
+    "prompt": "P1",
+    "duration": 4,
+    "stride": 1,
+    "exhaustive": true,
+    "batch": 4
+  },
+  "teacher": {
+    "identity": "same pinned native Qwen with LoRA disabled",
+    "frozen": true,
+    "cache_once": true
+  },
+  "selection": {
+    "normal_quantile": 0.99,
+    "bic_gain": 10.0,
+    "min_cluster_gap": 0.5,
+    "soft_coverage_fraction": 0.25,
+    "rank_anchors": 32,
+    "rank_margin": 0.5
+  },
+  "loss": {
+    "kind": "pointwise_focal_v3",
+    "gamma": 2.0,
+    "background_weight": 0.5,
+    "positive_weight": "frozen training-only score-gradient mass ratio clipped to [0.25,8]",
+    "anchor_weight": 0.0,
+    "normalization": "class-balanced fixed video mass; V2 positive coefficients retained; background fixed full-video mean; HT sampling"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "clip_grad_norm": 1.0
+  },
+  "training": {
+    "max_epochs": 4,
+    "min_epochs": 2,
+    "patience": 2,
+    "min_delta": 0.002,
+    "videos_per_step": 8,
+    "seed": 42,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0
+  },
+  "validation": {
+    "split": "val",
+    "selection": "maximum reviewed-subset pooled frame AUROC with nonregression in within macro AUROC, dev pooled AP and all-163 video AP; epoch0 fallback",
+    "annotations": "research/localization_dev_v2/dev_annotations.json",
+    "requires_reviewed_temporal_labels": true,
+    "reviewed_anomaly_videos": 34,
+    "normal_videos": 78,
+    "frame_validation_videos": 112,
+    "quality_thresholds": {
+      "positive_anomaly_overlap": 0.8,
+      "background_normal_overlap": 0.9
+    }
+  },
+  "resources": {
+    "allocation_minutes": 460,
+    "training_cu_budget": 60.0,
+    "reserve_cu": 3.4,
+    "profile_before_teacher": true,
+    "epoch_max_hours": 3.0,
+    "profile_safety_factor": 1.3,
+    "epoch_io_reserve_hours": 0.35,
+    "require_pointwise_epoch_profile": true,
+    "output_remote": "gdrive:remaining_20261108_v1/localization_v3",
+    "import_teacher_remote": "gdrive:remaining_20261108_v1/localization_v1/teacher",
+    "phase_allocation_cu": 15.0
+  },
+  "notes": [
+    "User-approved one serial fresh-Qwen LoRA trajectory, one seed; no ablation",
+    "No Huber anchor; native zero-shot full-video pseudo positives plus low-cluster background negatives",
+    "Teacher selection and global positive coefficient are immutable before sampling",
+    "34 reviewed validation anomalies required; annotations never enter training loss",
+    "Do not allocate unless CPU pseudo-label quality and runtime budget authorization gates pass"
+  ],
+  "execution": {
+    "attention_backend": "math",
+    "gradient_checkpointing": false
+  },
+  "sampling": {
+    "fraction": 0.25,
+    "normal_cap": 64,
+    "positive_cap": 32,
+    "background_cap": 32,
+    "teacher": "exhaustive cached frozen native; no refresh",
+    "student": "independent uniform candidate streams with fixed inverse inclusion weights"
+  }
+}

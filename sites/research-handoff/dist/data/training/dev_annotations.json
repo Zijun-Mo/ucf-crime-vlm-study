@@ -1,0 +1,1497 @@
+{
+  "version": 3,
+  "created_utc": "2026-11-14T10:29:30.018915+00:00",
+  "source": "Original22 reviewed validation annotations plus user-authorized Hydrogen native-video drafts and independent Codex image/boundary audit for12 additional validation videos; approximate, not official frame-exact ground truth",
+  "minimum_videos": 34,
+  "annotation_status": "34 validation anomaly videos reviewed; no training temporal supervision",
+  "review_protocol": {
+    "coarse_step_seconds": 2.0,
+    "refinement_steps_seconds": [
+      1.0,
+      0.5,
+      0.25
+    ],
+    "criterion": "Observable active abnormal episode; short pauses in continuing confrontation retained; static aftermath excluded, except ongoing visible fire/smoke",
+    "normal": "All frames outside annotated episodes; existing title cards are retained and can make some negatives easy",
+    "model_scores_seen_during_annotation": false,
+    "temporal_training_supervision": false,
+    "selection_bias": "Short-video and visually clear-event selection; not representative of all long/ambiguous validation videos",
+    "final_count_reason": "22 reviewed current-validation videos retained; initial stale-metadata split drafts rejected before upload or model selection, then supplemented using authoritative split.",
+    "uncertainty": "Approximate observable-event intervals; original annotator uncertainty retained, replay footage and edited camera views remain on displayed video timeline",
+    "new_annotation_author": "Gemini4 Hydrogen High via agy native read_file(video/mp4), native image overviews, 2fps boundary refinement",
+    "new_annotation_reviewer": "Codex visual review, not a second independent human annotator",
+    "native_tool_sampling": "approximately1fps; original timeline2fps boundary evidence reviewed separately",
+    "large_video_exception": "Fighting004 original exceeds100MB: full-duration remote CPU8fps/640px H264 preview; original source SHA and derived preview SHA recorded; no local video disk cache",
+    "new_selection": "12 additional validation positives selected by category and duration without model scores; six middle/six long where feasible"
+  },
+  "records": [
+    {
+      "name": "Abuse005_x264.mp4",
+      "source_sha256": "425744aa3472e424d52d7ce97bf6d0bdd445ad62ad1be110095d2027a31550cc",
+      "repo_path": "videos/Abuse/Abuse005_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 949,
+      "intervals": [
+        [
+          301,
+          949
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Officer forceful kicks/strikes and continuing physical restraint; later close view of the same confrontation.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          10,
+          31.633333
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Abuse005_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Abuse005_00.jpg"
+      ]
+    },
+    {
+      "name": "Abuse009_x264.mp4",
+      "source_sha256": "a831072d183a63a7241ed0c3ba49b0a0d1dadfa7797be4aaa0b94b4ddafee895",
+      "repo_path": "videos/Abuse/Abuse009_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1001,
+      "intervals": [
+        [
+          361,
+          555
+        ],
+        [
+          736,
+          855
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Adult swings/drops child, followed by intervention; replay separately annotated.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          12,
+          18.5
+        ],
+        [
+          24.5,
+          28.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Abuse009_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Abuse009_00.jpg"
+      ]
+    },
+    {
+      "name": "Assault018_x264.mp4",
+      "source_sha256": "356a959dd9be5eca3b737e21209a73cc0a202e10fa02f22e0a7e142cf9e7013a",
+      "repo_path": "videos/Assault/Assault018_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 361,
+      "intervals": [
+        [
+          61,
+          83
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Visible strike and immediate fall; static victim aftermath excluded.",
+      "boundary_uncertainty_seconds": 0.25,
+      "intervals_seconds": [
+        [
+          2,
+          2.75
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Assault018_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Assault018_00.jpg"
+      ]
+    },
+    {
+      "name": "Assault051_x264.mp4",
+      "source_sha256": "3b625aa3a19f0405407d417657629277377a973e504457e5f8d43f0c5cd9347a",
+      "repo_path": "videos/Assault/Assault051_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 601,
+      "intervals": [
+        [
+          286,
+          495
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Visible physical assault/chase interaction; ends as group separates and camera pans.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          9.5,
+          16.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Assault051_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Assault051_00.jpg"
+      ]
+    },
+    {
+      "name": "Assault004_x264.mp4",
+      "source_sha256": "0854476a29e84c824f4971f7df881bb9abc117df83b08063e9e3eb495aa9942a",
+      "repo_path": "videos/Assault/Assault004_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 3223,
+      "intervals": [
+        [
+          691,
+          3222
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Continuous violent confrontation with repeated strikes, victim falls and continuing close physical interaction.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          23,
+          107.4
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Assault004_x264_00.jpg",
+        "results/localization_v1/dev_review/Assault004_x264_01.jpg",
+        "results/localization_v1/dev_review/Assault004_x264_02.jpg",
+        "results/localization_v1/dev_review/refinements/Assault004_00.jpg"
+      ]
+    },
+    {
+      "name": "Burglary007_x264.mp4",
+      "source_sha256": "819cc17b64275313166673f7ba85f9cb4212b2ea120c2841aa47956b83edd7de",
+      "repo_path": "videos/Burglary/Burglary007_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1085,
+      "intervals": [
+        [
+          76,
+          1005
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Coordinated vehicle/storefront forcing and extraction, including interior view and departure.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          2.5,
+          33.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Burglary007_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Burglary007_00.jpg"
+      ]
+    },
+    {
+      "name": "Explosion009_x264.mp4",
+      "source_sha256": "d90f0972fc1b421f926812b511bcb81bcffa1755c9ec5de3e9049894e2e38a92",
+      "repo_path": "videos/Explosion/Explosion009_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1101,
+      "intervals": [
+        [
+          218,
+          1043
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Initial fireball, ongoing visible flames and replay; before fade to black.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          7.25,
+          34.75
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Explosion009_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements/Explosion009_00.jpg"
+      ]
+    },
+    {
+      "name": "Explosion030_x264.mp4",
+      "source_sha256": "3f9246103bb929bf1c77c64efa175a29cea6c795bc1f0fdcdbd85fb93e66b9d9",
+      "repo_path": "videos/Explosion/Explosion030_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 3244,
+      "intervals": [
+        [
+          713,
+          3243
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Initial pump-side explosion/fire, then continuously burning fire to clip end.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          23.75,
+          108.1
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Explosion030_x264_00.jpg",
+        "results/localization_v1/dev_review/Explosion030_x264_01.jpg",
+        "results/localization_v1/dev_review/Explosion030_x264_02.jpg",
+        "results/localization_v1/dev_review/refinements/Explosion030_00.jpg"
+      ]
+    },
+    {
+      "name": "Fighting043_x264.mp4",
+      "source_sha256": "723372b37279da9baab052f654cce8450c792efe22d8a2af8b6462ab542e3d67",
+      "repo_path": "videos/Fighting/Fighting043_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 3143,
+      "intervals": [
+        [
+          3038,
+          3143
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Visible grabbing/striking between foreground people; earlier argument without clear contact excluded.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          101.25,
+          104.76666666666667
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Fighting043_x264_00.jpg",
+        "results/localization_v1/dev_review/Fighting043_x264_01.jpg",
+        "results/localization_v1/dev_review/Fighting043_x264_02.jpg",
+        "results/localization_v1/dev_review/refinements/Fighting043_00.jpg"
+      ]
+    },
+    {
+      "name": "Arson049_x264.mp4",
+      "source_sha256": "39e84aee4bbcc2694fbea6ffc1a057d67fe45edb24b146922bb22c85cd0ea4af",
+      "repo_path": "videos/Arson/Arson049_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 386,
+      "intervals": [
+        [
+          106,
+          386
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "First visible ignition and sustained flame to clip end.",
+      "boundary_uncertainty_seconds": 0.25,
+      "intervals_seconds": [
+        [
+          3.5,
+          12.866666666666667
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Arson049_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Arson049_00.jpg"
+      ]
+    },
+    {
+      "name": "Arson039_x264.mp4",
+      "source_sha256": "66ecbaf29b65efb9362959d0324a6df690b65ec70b7e11e13c25b456619db09e",
+      "repo_path": "videos/Arson/Arson039_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 3376,
+      "intervals": [
+        [
+          211,
+          525
+        ],
+        [
+          2506,
+          2835
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Visible fireball/door fire and immediate burning escape in two replay sequences; later static aftermath excluded.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          7,
+          17.5
+        ],
+        [
+          83.5,
+          94.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Arson039_x264_00.jpg",
+        "results/localization_v1/dev_review/Arson039_x264_01.jpg",
+        "results/localization_v1/dev_review/Arson039_x264_02.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Arson039_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Arson039_01.jpg"
+      ]
+    },
+    {
+      "name": "RoadAccidents101_x264.mp4",
+      "source_sha256": "80be130e8c0234d524af7688c3f27fa8e8a29d4e718b353f3350ad4e2919a11c",
+      "repo_path": "videos/RoadAccidents/RoadAccidents101_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 263,
+      "intervals": [
+        [
+          188,
+          225
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Vehicle strikes/traverses roundabout obstruction with visible sparks/debris; later dust aftermath excluded.",
+      "boundary_uncertainty_seconds": 0.25,
+      "intervals_seconds": [
+        [
+          6.25,
+          7.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/RoadAccidents101_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/RoadAccidents101_00.jpg"
+      ]
+    },
+    {
+      "name": "RoadAccidents134_x264.mp4",
+      "source_sha256": "fb642f17e42286e0bf801c5225255fabe43fbaa8a73bd0cc1d1e4e153e90ec46",
+      "repo_path": "videos/RoadAccidents/RoadAccidents134_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 277,
+      "intervals": [
+        [
+          83,
+          135
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Road vehicle impact and person thrown/sliding near barrier; stopped aftermath excluded.",
+      "boundary_uncertainty_seconds": 0.25,
+      "intervals_seconds": [
+        [
+          2.75,
+          4.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/RoadAccidents134_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/RoadAccidents134_00.jpg"
+      ]
+    },
+    {
+      "name": "RoadAccidents047_x264.mp4",
+      "source_sha256": "a43fe7febe5e3beb75611ca30625312b3ccce05f21f94ae8bc83fdafed327a3b",
+      "repo_path": "videos/RoadAccidents/RoadAccidents047_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 439,
+      "intervals": [
+        [
+          136,
+          438
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Large truck contacts/crushes the small three-wheeler immediately in front of its cab; episode continues to clip end.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          4.5,
+          14.6
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/RoadAccidents047_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/RoadAccidents047_00.jpg"
+      ]
+    },
+    {
+      "name": "RoadAccidents026_x264.mp4",
+      "source_sha256": "12c21cb94cea2e574e08111699e792ca0d01937c3dc42e62cebf11a34d7d0425",
+      "repo_path": "videos/RoadAccidents/RoadAccidents026_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 782,
+      "intervals": [
+        [
+          511,
+          615
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Van contacts car at junction and pushes it during immediate collision motion.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          17,
+          20.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/RoadAccidents026_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/RoadAccidents026_00.jpg"
+      ]
+    },
+    {
+      "name": "Robbery068_x264.mp4",
+      "source_sha256": "4ed3088b59b666ba6c639e0a121202cf2c889b93a5538de88757ec47391e3e6c",
+      "repo_path": "videos/Robbery/Robbery068_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 395,
+      "intervals": [
+        [
+          106,
+          395
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Masked entrants threaten counter area; ensuing direct struggle and attempted escape.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          3.5,
+          13.166666666666666
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Robbery068_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Robbery068_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Robbery068_01.jpg"
+      ]
+    },
+    {
+      "name": "Robbery144_x264.mp4",
+      "source_sha256": "d6e268a399d526473b9b29f5b0f1798adb19b42134ed40f3eb26d7526d8223f3",
+      "repo_path": "videos/Robbery/Robbery144_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 805,
+      "intervals": [
+        [
+          646,
+          804
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Motorcycle passenger snatches seated person property, followed by immediate chase.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          21.5,
+          26.8
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Robbery144_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Robbery144_00.jpg"
+      ]
+    },
+    {
+      "name": "Robbery092_x264.mp4",
+      "source_sha256": "3739c4f649c21485df48c9a3038a7d9a0be75f0b0eaf3bfdb0205109515841ad",
+      "repo_path": "videos/Robbery/Robbery092_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 850,
+      "intervals": [
+        [
+          286,
+          495
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Sudden recoil/fall at counter, fleeing and apparent armed counter-confrontation/chase; precise weapon identity is not resolved.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          9.5,
+          16.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Robbery092_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Robbery092_00.jpg"
+      ]
+    },
+    {
+      "name": "Vandalism003_x264.mp4",
+      "source_sha256": "6affbfd0c23da681d74115f40c3298a03ab2952e81acad62f9b55c2084421f27",
+      "repo_path": "videos/Vandalism/Vandalism003_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1469,
+      "intervals": [
+        [
+          586,
+          645
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Person topples/kicks parked scooter and departs; time-lapse makes exact contact boundaries approximate.",
+      "boundary_uncertainty_seconds": 1.0,
+      "intervals_seconds": [
+        [
+          19.5,
+          21.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Vandalism003_x264_00.jpg",
+        "results/localization_v1/dev_review/Vandalism003_x264_01.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Vandalism003_00.jpg"
+      ]
+    },
+    {
+      "name": "Vandalism034_x264.mp4",
+      "source_sha256": "8aab06b2d1bb092687def6f06922ec917acbd032316886603292ae7c1107a6d2",
+      "repo_path": "videos/Vandalism/Vandalism034_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1756,
+      "intervals": [
+        [
+          691,
+          1755
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Repeated forceful strikes/throws toward door/window and fetching projectiles; active episode to end.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          23,
+          58.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Vandalism034_x264_00.jpg",
+        "results/localization_v1/dev_review/Vandalism034_x264_01.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Vandalism034_00.jpg"
+      ]
+    },
+    {
+      "name": "Shoplifting019_x264.mp4",
+      "source_sha256": "a4c3160277fd860ce9beab95737adbbff1da13bed2d3da9bee02bdb54ae2b80d",
+      "repo_path": "videos/Shoplifting/Shoplifting019_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 657,
+      "intervals": [
+        [
+          256,
+          465
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Visible merchandise grab and flight with goods followed by staff struggle/chase.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          8.5,
+          15.5
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Shoplifting019_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Shoplifting019_00.jpg"
+      ]
+    },
+    {
+      "name": "Stealing097_x264.mp4",
+      "source_sha256": "85ee1bde0832c4e146230f8437e2535bfac8e0fb72c9509195abdb8dedede888",
+      "repo_path": "videos/Stealing/Stealing097_x264.mp4",
+      "fps": 30.0,
+      "n_frames": 1150,
+      "intervals": [
+        [
+          226,
+          420
+        ]
+      ],
+      "reviewed": true,
+      "reviewer": "Codex visual inspection of timestamped images, without teacher/student scores",
+      "observable_event_note": "Repeated forceful manipulation/striking at parked vehicle side window, then departure; ownership cannot be inferred visually.",
+      "boundary_uncertainty_seconds": 0.5,
+      "intervals_seconds": [
+        [
+          7.5,
+          14
+        ]
+      ],
+      "evidence": [
+        "results/localization_v1/dev_review/Stealing097_x264_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Stealing097_00.jpg",
+        "results/localization_v1/dev_review/refinements_v2/Stealing097_01.jpg"
+      ]
+    },
+    {
+      "name": "Arrest018_x264.mp4",
+      "source_sha256": "d01e8a1c39d67c12800e827551f3db1e5e55bf75c189eeeeb4cfe4d5cfa78c13",
+      "fps": 30.0,
+      "n_frames": 2434,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Arrest018_x264.mp4",
+        "sampled_rate_fps": 1,
+        "sampled_frames": 82,
+        "timestamp_range": "00:00 to 01:20 (two frames at 00:00, then 1s intervals)"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Arrest018_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arrest018_x264.mp4/overview_01.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Arrest018_x264.mp4/boundary_00.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          23.5,
+          36.5
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.5,
+      "uncertainty": "+/-1.5s around 23.5s runner entry and 36.5s SUV pullout; limited by distance, nighttime glare, 0.5s montage step, and no audio.",
+      "observable_event_note": "Dark-clad runner enters left sidewalk toward parked police sedan/SUV (23.5-26s), SUV brake/emergency lights flash while bystanders scatter across crosswalk (27-30s), two figures converge behind SUV (31-34s), and SUV pulls out uphill (35-36.5s).",
+      "normal_context_before_after": "Before (0-23s): steady curb/pedestrians. After (37-80s): SUV drives uphill behind white taxi; normal pedestrian and taxi traffic follows.",
+      "uncertain_event_identity": "Unresolved exact event type (arrest vs scuffle/dispersal) due to distance, glare, and no audio; visual departure ends cleanly as SUV exits uphill by 37s.",
+      "changes_and_reasons": "Shifted [23.0, 36.0] to [23.5, 36.5] per boundary_00.jpg: left-sidewalk runner first enters at t=23.50-24.00s, and SUV finishes pulling out into lane at t=36.00-36.50s before normal uphill driving at t=37.00s.",
+      "reviewed": true,
+      "repo_path": "videos/Arrest/Arrest018_x264.mp4",
+      "intervals": [
+        [
+          706,
+          1095
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Running/scattering and close interaction visible; exact arrest identity cannot be established in distant night view; retain original uncertainty.",
+      "evidence": [
+        "results/localization_dev_v2/review/Arrest018_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arrest018_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/boundary_review/Arrest018_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Arrest018_x264.mp4.json",
+      "hydrogen_final_sha256": "73fb6976297192aee5f6d7add9f2bba2e4531c7ed27ad029c52bf3889d9f1065"
+    },
+    {
+      "name": "Shooting005_x264.mp4",
+      "source_sha256": "9f4fa4b5d989ad02d15ef298bbd5c0a9b5f5b863b8b8afb174a0b6f0c632c729",
+      "fps": 30.0,
+      "n_frames": 5330,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Shooting005_x264.mp4",
+        "sampled_rate_fps": 1,
+        "sampled_frames": 179,
+        "timestamp_range": "00:00 to 02:57 (two frames at 00:00, then 1s intervals)"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Shooting005_x264.mp4/boundary_00.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          25.5,
+          53.0
+        ],
+        [
+          77.0,
+          95.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 2.5,
+      "uncertainty": "+/-2.5s; 2fps gamma0.5 montage narrows starts (25.5s, 77.0s) and Episode 1 retreat end (53.0s), but 93.5-96.5s transition to doorway tending remains gradual and audio-free.",
+      "observable_event_note": "Episode 1 (25.5-53s): figure emerges on right porch (25.5s), armed officers advance/aim down alley (28-49s), then scramble/retreat backward out of frame (51.5-52.5s, clear by 53s). Episode 2 (77-95s): officer sprints back up alley (77s) and aims at doorway (78.5-93s) before leaning in.",
+      "normal_context_before_after": "Before (0-25s): black frame, porch entry (1-3s), static alley (4-25s). Excluded 53-77s waiting lull and 95-177s post-threat doorway aid/extraction plus fade-out.",
+      "uncertain_event_identity": "Unresolved exact gunshot timing without audio and exact boundary (~93-96s) where armed re-engagement becomes doorway tending/aid.",
+      "changes_and_reasons": "Refined Episode 1 start from 25.0 to 25.5 per boundary_00.jpg (porch static through t=25.00s, figure emerges at t=25.50s); confirmed 53.0s clear and 77.0s runner onset. Kept 95.0s end as gradual transition.",
+      "reviewed": true,
+      "repo_path": "videos/Shooting/Shooting005_x264.mp4",
+      "intervals": [
+        [
+          766,
+          1590
+        ],
+        [
+          2311,
+          2850
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Acute confrontation and renewed armed approach separated; later static aid/removal excluded; original darkness prevents verifying muzzle flashes; gamma display is for review only.",
+      "evidence": [
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Shooting005_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Shooting005_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Shooting005_x264.mp4.json",
+      "hydrogen_final_sha256": "32e3985c603b255e3b663d0546dff68c644b5b23999378beb9c1b2acf4f486e7"
+    },
+    {
+      "name": "Arson013_x264.mp4",
+      "source_sha256": "a09533aec03df53c64bc3b4922adfd00c9d499f72de2698035158618e06f9837",
+      "fps": 30.0,
+      "n_frames": 6379,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Arson013_x264.mp4",
+        "sampled_rate_fps": 1,
+        "sampled_frames": 214,
+        "timestamp_range": "00:00 to 03:32 (two frames at 00:00, then 1s intervals)"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Arson013_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Arson013_x264.mp4/boundary_01.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          32.5,
+          52.0
+        ],
+        [
+          108.0,
+          116.0
+        ],
+        [
+          130.5,
+          132.5
+        ],
+        [
+          176.5,
+          201.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 2.0,
+      "uncertainty": "+/-2.0s; 0.5s boundary frames tighten visual entry/exit, while multi-camera edits, off-camera interior prep, and dark road departure leave exact cutoffs approximate.",
+      "observable_event_note": "Exterior camera4: suspect enters sidewalk with red jerrycan (32.5s) and runs out (51.5s, gone 52s); returns along wall into corner (108-115.5s, gone 116s). Interior camera10: runs past counter (130.5-132s, gone 132.5s); later foreground lens pass precedes ignition/smoke/fire (176.5-191s) and exterior flight (195-201s).",
+      "normal_context_before_after": "Excluded quiet exterior (0-32s, 201.5-212s) and static empty gaps (52-107.5s, 116-130s, 132.5-176s).",
+      "uncertain_event_identity": "Unresolved whether 176.5s lens pass/shadow is pre-ignition motion vs lens obstruction before 182s flash, and whether off-camera 132.5-176s interior gap stays split.",
+      "changes_and_reasons": "Adjusted [33.0,52.0]->[32.5,52.0] (sidewalk entry t=32.50s), [130.0,132.0]->[130.5,132.5] (empty at t=130.00s, still inside at t=132.00s, gone t=132.50s), and 176.0->176.5 (empty t=176.00s, foreground motion t=176.50s) per boundary_00/01.",
+      "reviewed": true,
+      "repo_path": "videos/Arson/Arson013_x264.mp4",
+      "intervals": [
+        [
+          976,
+          1560
+        ],
+        [
+          3241,
+          3480
+        ],
+        [
+          3916,
+          3975
+        ],
+        [
+          5296,
+          6030
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Multiple edited camera views; retained entry/ignition/fire/flight episodes; long empty gaps excluded; no inference from camera wall-clock continuity.",
+      "evidence": [
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Arson013_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Arson013_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Arson013_x264.mp4/boundary_01.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Arson013_x264.mp4.json",
+      "hydrogen_final_sha256": "560beb9bab4374cd0f7c1b4271a8e883a9832b42ced38b548b0a80d36e33361c"
+    },
+    {
+      "name": "Assault041_x264.mp4",
+      "source_sha256": "d7af195856e82e3ab23029a9bdbb775cf1b733276c2c5e40fd891413a79ff2a9",
+      "fps": 30.0,
+      "n_frames": 5023,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Assault041_x264.mp4",
+        "sampled_rate_fps": 1,
+        "sampled_frames": 168,
+        "timestamp_range": "00:00 to 02:46 (two frames at 00:00, then 1s intervals)"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Assault041_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Assault041_x264.mp4/boundary_01.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          15.5,
+          18.0
+        ],
+        [
+          103.5,
+          112.0
+        ],
+        [
+          142.0,
+          160.5
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.5,
+      "uncertainty": "+/-1.5s; 0.5s boundary frames tighten strike/shove/door-block boundaries, though CCTV clock skips and verbal-vs-physical boundary remain audio-limited.",
+      "observable_event_note": "CH 7: customer lunges across counter striking clerk out of frame (15.5-18s); later grabs/shoves clerk at doorway, struggles at door, and clerk pursues outside (103.5-112s). CH 3 replay: customer blocks door (142-146s), clerk chases, customer retrieves item, and clerk strikes at him before pursuing up sidewalk (147-160.5s).",
+      "normal_context_before_after": "Excluded verbal arguments (0-15s, 18.5-81s, 93-103s), exit (82-92s), off-camera/doorway waiting (112.5-141.5s), and clerk returning inside (161-166s).",
+      "uncertain_event_identity": "Unresolved without audio whether verbal disputes include threats, and CH 3 (139-166s) replays 11:38:59-11:39:26 already off-camera on CH 7.",
+      "changes_and_reasons": "Adjusted [15,18]->[15.5,18.0] (calm at t=15.00s, lunge/strike t=15.50-17.00s), [103,111]->[103.5,112.0] (contact starts t=103.50-104.00s, clerk still pursuing out door t=111.50-112.00s), and [142,160]->[142.0,160.5] (chase continues past t=160.00s) per boundary_00/01.",
+      "reviewed": true,
+      "repo_path": "videos/Assault/Assault041_x264.mp4",
+      "intervals": [
+        [
+          466,
+          540
+        ],
+        [
+          3106,
+          3360
+        ],
+        [
+          4261,
+          4815
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Three physical-action intervals across interior and replay exterior view; verbal gesturing alone excluded; repeated displayed footage retained on video timeline.",
+      "evidence": [
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Assault041_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Assault041_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Assault041_x264.mp4/boundary_01.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Assault041_x264.mp4.json",
+      "hydrogen_final_sha256": "25c0eb39a99bc38f20d70e20c6601404a0a0a1e6b299856d12d3c6a3699e7222"
+    },
+    {
+      "name": "RoadAccidents014_x264.mp4",
+      "source_sha256": "56f1712c963c281f45bfd81ceb27d14d445a01eadbcf0fc3c7859009e0900695",
+      "fps": 30.0,
+      "n_frames": 11895,
+      "duration_s": 396.5,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/RoadAccidents014_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 397
+      },
+      "evidence_paths": [
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/RoadAccidents014_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/RoadAccidents014_x264.mp4/boundary_01.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          8.0,
+          16.0
+        ],
+        [
+          58.0,
+          67.0
+        ],
+        [
+          265.0,
+          276.0
+        ],
+        [
+          358.0,
+          373.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 2.0,
+      "uncertainty": "+/- 2.0s per episode; 2fps boundary crops clarify vehicle entry/settlement, though low-resolution monochrome snow spray obscures exact distant bumper contact.",
+      "observable_event_note": "Four active loss-of-control/collision bursts on snowy highway CCTV: (1) 8-16s, braking/skid behind stopped queue with shoulder slide-off; (2) 58-67s, light car enters fast (57-58.5s), spins across lanes (~59-61s), and slides off right alongside following car (settled by 67s); (3) 265-276s, left-lane car skids sideways into stopped vehicles/snowbank (spray clears by 276s); (4) 358-373s, dark car approaches Wal-Mart trailer (358-359.5s) and slides/impacts rear while second car spins into left snow median (stationary by 372.5-373s).",
+      "changes_and_reasons": "Tightened burst 2 start from 57.0s to 58.0s (light car still driving straight at 57.0-58.5s in boundary_00) and burst 4 end from 374.0s to 373.0s (median-stuck car already stationary by 372.5-373.0s in boundary_01). Burst 1 (8-16s) and burst 3 (265-276s) confirmed by 2fps crops.",
+      "reviewed": true,
+      "repo_path": "videos/RoadAccidents/RoadAccidents014_x264.mp4",
+      "intervals": [
+        [
+          241,
+          480
+        ],
+        [
+          1741,
+          2010
+        ],
+        [
+          7951,
+          8280
+        ],
+        [
+          10741,
+          11190
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Stationary queue/aftermath excluded; four active skid/collision bursts retained; distant first/third impacts have uncertainty due resolution and glare.",
+      "evidence": [
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/RoadAccidents014_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/RoadAccidents014_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/RoadAccidents014_x264.mp4/boundary_01.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/RoadAccidents014_x264.mp4.json",
+      "hydrogen_final_sha256": "e033740b872ca579b8844d02ae4b5226e05974fcc781d64d3ba7e627f29aed22"
+    },
+    {
+      "name": "Fighting004_x264.mp4",
+      "source_sha256": "e93bb27e96279ff1a740d96f4e4bc5de5a5fe324deffa435e2dd58fd285f9916",
+      "fps": 30.0,
+      "n_frames": 16777,
+      "duration_s": 559.2333333333333,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Fighting004_x264.mp4",
+        "sampled_rate": "1 fps (read_file internal sampling of 8.0 fps, max_width=640 full-duration preview)",
+        "sampled_frames": 559,
+        "frame_timestamps": "00:00 through 09:18 (part_0: 00:00-04:59, part_1: 05:00-09:18)",
+        "temporal_sampling_limitation": "Original 121757725-byte 30fps video exceeded 100MB read_file cap and remained remote. Read full-duration 8.0fps/640px preview (559.25s, 4706270 bytes); read_file surfaced 1fps frames, so sub-second strike/release timing and exact splice frames cannot be verified without 2fps+ boundary crops."
+      },
+      "preview_metadata": {
+        "preview_sha256": "bfdef37d125d92e198158fc623f185e34bc7ef842c68f369babc8cd34fce70a9",
+        "preview_bytes": 4706270,
+        "duration_s": 559.25,
+        "preview_fps": 8.0,
+        "original_timeline_offset_s": 0.0,
+        "max_width": 640,
+        "reason": "Hydrogen read_file rejects original 121757725-byte video at 100MB cap",
+        "original_kept_remote": true
+      },
+      "evidence": [
+        "results/localization_dev_v2/review/Fighting004_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Fighting004_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Fighting004_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Fighting004_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Fighting004_x264.mp4/boundary_01.jpg",
+        "results/localization_dev_v2/boundary_review/Fighting004_x264.mp4/boundary_02.jpg",
+        "results/localization_dev_v2/boundary_review/Fighting004_x264.mp4/boundary_03.jpg",
+        "results/localization_dev_v2/boundary_review/Fighting004_x264.mp4/boundary_04.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          5.0,
+          68.0
+        ],
+        [
+          90.0,
+          114.0
+        ],
+        [
+          169.0,
+          270.0
+        ],
+        [
+          285.0,
+          319.0
+        ],
+        [
+          326.0,
+          345.0
+        ],
+        [
+          367.0,
+          373.0
+        ],
+        [
+          399.0,
+          464.0
+        ],
+        [
+          470.0,
+          532.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "observable_event_note": "Pool-hall CCTV ('CAM03') containing primary footage (0-325.5s, CCTV 02:28:18-02:33:42) plus four spliced replays of earlier clips (326-373.0s = 02:29:06-02:29:51; 373.5-465.0s = 02:30:41-02:32:12; 465.5-512.5s = 02:28:18-02:29:04; 513.0-559.2s = 02:29:52-02:30:38). Active confrontation episodes in primary footage: (1) 5-68s, top-right melee spilling down right wall and across bottom of table; (2) 90-114s, women enter and crowd scuffles at bottom, up left side, and at top end; (3) 169-270s, upper-left corner brawl, right-edge table grapple, top-right/top-left scuffles, brief pauses around ongoing restraint/confrontation at 241-246s, and renewed top-right grappling through 270s; (4) 285-319s, bottom-right chase/fall and top-end fight while a man rests injured over the table. Replayed active fights appear at 326-345s, 367-373s (active scuffling continues at 372.5-373.0s right up to the splice into calm 02:30:41 footage between 373.0s and 373.5s), 399-464s, and 470-532s (continuous active physical confrontation across the 512.5-513.0s replay splice from CCTV 02:29:04 to 02:29:52). Calm pool-hall activity, static talking, and post-fight recovery/waiting (0-4s, 68-89s, 114-168s, 270-284s, 319-325.5s, 345-366s, 373.5-398s, 465-469s, 532-559.2s) are excluded.",
+      "changes_and_reasons": "Final boundary audit of all 18 draft boundaries using 0.5s-step contact sheets boundary_00.jpg through boundary_04.jpg, preserving prior 1fps native preview evidence (8.0fps/640px remote full-duration preview) and source/time metadata. (1) Merged [470.0, 512.0] and [513.0, 532.0] into [470.0, 532.0]: boundary_03.jpg (8 end) and boundary_04.jpg (9 start) show active physical grappling at the bottom of the table at t=511.50, 512.00, 512.50 (CCTV 02:29:04) immediately before the replay splice and continuing active physical grappling at t=513.00, 513.50, 514.00 (CCTV 02:29:52-53) immediately after the splice, with no calm normal gap. (2) Extended [367.0, 372.0] to [367.0, 373.0]: boundary_02.jpg (6 end) shows active bottom-right grappling continuing at t=372.50 and t=373.00 (CCTV 02:29:51) before the splice to calm 02:30:41 footage at t=373.50. (3) Confirmed remaining boundaries (5, 68, 90, 114, 169, 270, 285, 319, 326, 345, 367, 399, 464, 470, 532s) against 0.5s frames and reduced boundary_uncertainty_seconds from 3.0 to 1.0 (sub-0.5s frame-exact timing not claimed because crops are 0.5s-spaced and native read was 1fps on the 8fps preview).",
+      "reviewed": true,
+      "repo_path": "videos/Fighting/Fighting004_x264.mp4",
+      "intervals": [
+        [
+          151,
+          2040
+        ],
+        [
+          2701,
+          3420
+        ],
+        [
+          5071,
+          8100
+        ],
+        [
+          8551,
+          9570
+        ],
+        [
+          9781,
+          10350
+        ],
+        [
+          11011,
+          11190
+        ],
+        [
+          11971,
+          13920
+        ],
+        [
+          14101,
+          15960
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "All nine proposed episodes inspected, including replay cuts; final two merged across unsupported one-second normal gap; eight final intervals. Full-duration remote preview preserves original timeline.",
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Fighting004_x264.mp4.json",
+      "hydrogen_final_sha256": "dd070239db4dd5359bfe501e428bb8c95c258d7c5b06dd7147f4411359e89d49"
+    },
+    {
+      "name": "Burglary096_x264.mp4",
+      "source_sha256": "188f98d632f233495b0b7b183e2ccc78f9cff7b419b8128c07d0b1419aea4c47",
+      "fps": 30.0,
+      "n_frames": 6629,
+      "duration_s": 220.96666666666667,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Burglary096_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 222
+      },
+      "evidence_paths": [
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Burglary096_x264.mp4/boundary_00.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          25.0,
+          201.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 2.0,
+      "uncertainty": "+/- 2.0s at end (200-203s); 201.5-202.0s is empty in the main room/hallway, and 202.5-204.5s shows only an ambiguous extreme-left-border blur before police enter around 206-209s.",
+      "observable_event_note": "In boundary_00, the living room is empty at 23.5-24.5s and the first intruder enters from the left hallway at exactly 25.0s. Active searching/handling items continues (with brief 51-56s and 141-145s back-room pauses) through ~200s (overview_02 t=200s shows dark-clothed figure at left dining edge). By 201.5-202.0s (boundary_00) the hallway/living room is empty; police officers enter at 206-209s.",
+      "changes_and_reasons": "Confirmed start at 25.0s via boundary_00 (first appearance at t=25.00s). Trimmed end from 203.0s to 201.0s because boundary_00 shows an empty hallway/living room at 201.5-202.0s and only unidentifiable extreme-edge blur at 202.5-204.5s; avoids labeling empty/police-transition footage by inference.",
+      "reviewed": true,
+      "repo_path": "videos/Burglary/Burglary096_x264.mp4",
+      "intervals": [
+        [
+          751,
+          6030
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Repeated intruder movement/search retained with short off-camera gaps; end shortened after empty boundary imagery; police-only tail excluded; endpoint remains approximate.",
+      "evidence": [
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Burglary096_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Burglary096_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Burglary096_x264.mp4.json",
+      "hydrogen_final_sha256": "92b298a6434b0d8aec4d615ca4864f5a1114f92047746f346db367dfaacd14a7"
+    },
+    {
+      "name": "Robbery141_x264.mp4",
+      "source_sha256": "ae698bc4688e02d2513ab8722010fd5df005ccc3d1b96208b89ccfe35c33c8bb",
+      "fps": 30.0,
+      "n_frames": 3981,
+      "duration_s": 132.7,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Robbery141_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 134
+      },
+      "evidence_paths": [
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Robbery141_x264.mp4/boundary_00.jpg"
+      ],
+      "intervals_seconds": [
+        [
+          15.0,
+          40.5
+        ],
+        [
+          66.0,
+          84.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "uncertainty": "+/- 1.0s at 2fps boundaries; unresolved alternative splits episode 2 around the 70-77s off-camera pause into [66.0, 70.0] and [78.0, 84.0].",
+      "observable_event_note": "2fps boundary_00 shows quiet counter through 14.5s, masked suspect appearing at glass front door at 15.0s, counter robbery continuing until black-shirted suspect exits frame bottom-left at 40.0s (empty at 40.5s). After empty 40.5-65.5s gap, black-shirted suspect reappears behind counter with bag at 66.0s, both suspects pause off-camera 70-77s, then flee out front door (82.5-83.5s) while purple-shirted employee keeps hands raised (through 84.0-84.5s).",
+      "changes_and_reasons": "Adjusted episode 1 end from 40.0s to 40.5s because the suspect is still visible walking off-camera at t=40.00s in boundary_00 before disappearing at t=40.50s. Confirmed 15.0s start, 66.0s episode 2 start, and 84.0s flight/hands-raised end.",
+      "reviewed": true,
+      "repo_path": "videos/Robbery/Robbery141_x264.mp4",
+      "intervals": [
+        [
+          451,
+          1215
+        ],
+        [
+          1981,
+          2520
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Long empty-counter gap excluded; observed bag transport/flight and victim hands-raised period retained; short linked pause retained; unrelated promo tail excluded by event criterion.",
+      "evidence": [
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Robbery141_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Robbery141_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Robbery141_x264.mp4.json",
+      "hydrogen_final_sha256": "6bc0a8723025fcba1cb12fe4a923364d4907c258eb631859e6aaa287dbd434e2"
+    },
+    {
+      "name": "Abuse035_x264.mp4",
+      "source_sha256": "cf4937a5a173b8cd5bd9a7e8afd3ef36cecd1f21c6cdd14a971175baae152aa2",
+      "fps": 30.0,
+      "n_frames": 2651,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Abuse035_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 89,
+        "timestamp_range": "00:00 (2 frames) and 00:01-01:27 (87 frames)"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Abuse035_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Abuse035_x264.mp4/overview_01.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Abuse035_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Abuse035_x264.mp4/boundary_01.jpg"
+      ],
+      "refined_path": "research/localization_dev_v2/hydrogen_refined/Abuse035_x264.mp4.json",
+      "refined_intervals_seconds": [
+        [
+          2.0,
+          40.0
+        ],
+        [
+          48.0,
+          55.0
+        ],
+        [
+          63.0,
+          79.0
+        ],
+        [
+          86.0,
+          88.0
+        ]
+      ],
+      "intervals_seconds": [
+        [
+          1.0,
+          41.0
+        ],
+        [
+          48.0,
+          55.0
+        ],
+        [
+          63.0,
+          79.0
+        ],
+        [
+          86.0,
+          88.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "uncertainty": "+/- 1.0s based on 0.5s (2 fps) boundary frames and scene cut timing.",
+      "observable_event_note": "Spliced classroom video with scene cut between 41.0s and 41.5s. Episode 1 (1s-41s): adult reaches/pulls small child from seat to floor and kneels holding child down until cut. Episode 2 (48s-55s): after cot setup (42s-47s), adult holds child on cot and pulls sheet up. Episode 3 (63s-79s): adult returns and presses covered child onto cot. Episode 4 (86s-88s): adult returns and sits on cot over covered child through clip end (~88.3s).",
+      "normal_context_before_after": "0.5s shows upright standing before contact; 41.5s-47.5s shows cot placement; 55.5s-62.5s and 79.5s-85.5s show off-camera gaps.",
+      "uncertain_event_identity": "48s-55s overlaps partially with nap-time placement before repeated pressing and sitting.",
+      "changes_and_reasons": "Moved Episode 1 start 2s->1s (boundary_00 t=1.00s reaching/grasping begins, t=1.50s pulling child down) and end 40s->41s (t=41.00s still in first scene before cut at t=41.50s). Confirmed 48s, 55s, 63s, 79s, 86s, and 88s (continues to ~88.3s) in boundary_00/01.",
+      "reviewed": true,
+      "repo_path": "videos/Abuse/Abuse035_x264.mp4",
+      "intervals": [
+        [
+          31,
+          1230
+        ],
+        [
+          1441,
+          1650
+        ],
+        [
+          1891,
+          2370
+        ],
+        [
+          2581,
+          2640
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Reviewed all four episodes; start/end adjusted after dense frames; the last interaction is cut by video end.",
+      "evidence": [
+        "results/localization_dev_v2/review/Abuse035_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Abuse035_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/boundary_review/Abuse035_x264.mp4/boundary_00.jpg",
+        "results/localization_dev_v2/boundary_review/Abuse035_x264.mp4/boundary_01.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Abuse035_x264.mp4.json",
+      "hydrogen_final_sha256": "351c5f4564ce2937fb2405fd45fd3dee92dd5a6f5b4fcdb8788327bd0143ac5a"
+    },
+    {
+      "name": "Stealing007_x264.mp4",
+      "source_sha256": "9c1667beb35370510af4048a6923e4fa5d8215f5bbc03fee5c83b27c9be704ff",
+      "fps": 30.0,
+      "n_frames": 3090,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Stealing007_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 103,
+        "timestamp_range": "00:00-01:42"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Stealing007_x264.mp4/boundary_00.jpg"
+      ],
+      "refined_path": "research/localization_dev_v2/hydrogen_refined/Stealing007_x264.mp4.json",
+      "refined_intervals_seconds": [
+        [
+          68.0,
+          90.0
+        ]
+      ],
+      "intervals_seconds": [
+        [
+          68.0,
+          91.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "uncertainty": "+/- 1.0s based on 0.5s (2 fps) boundary frames.",
+      "observable_event_note": "At 68s, a man in a light-blue shirt reaches a parked red/black motorcycle, manipulates the handlebars/ignition (70s-75s), mounts and turns the bike (76s-85s), and rides up the street until reaching the top intersection around 91s.",
+      "normal_context_before_after": "0s-67s shows street traffic, parked bikes, and stationary waiting (44s-67s) while two others ride off on a foreground bike; 91.5s-102s shows normal passing traffic.",
+      "uncertain_event_identity": "44s-67s standing/waiting near the parked bikes is excluded as non-active waiting without visible tampering.",
+      "changes_and_reasons": "Confirmed 68s onset (boundary_00 t=67.50s stepping toward bike, t=68.00s reaching rear/side of target bike) and extended end 90s->91s (t=90.00s and t=90.50s clearly still riding toward the upper road before exiting/merging at t=91.00s-91.50s).",
+      "reviewed": true,
+      "repo_path": "videos/Stealing/Stealing007_x264.mp4",
+      "intervals": [
+        [
+          2041,
+          2730
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Observed approach/manipulation and taking-away episode; unrelated pedestrians/riders outside event excluded; ownership inferred only from episode context.",
+      "evidence": [
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Stealing007_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Stealing007_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Stealing007_x264.mp4.json",
+      "hydrogen_final_sha256": "66f26573095e7c2e246725ba7c9b740f6ab67c7ce8a6cf9b2a64e9526351b426"
+    },
+    {
+      "name": "Vandalism042_x264.mp4",
+      "source_sha256": "b715d3912c3ac6bd0e779aef30ff9449546f30509b77c48ae3cb56f4580e4618",
+      "fps": 30.0,
+      "n_frames": 3596,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Vandalism042_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 120,
+        "timestamp_range": "00:00-01:59"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Vandalism042_x264.mp4/boundary_00.jpg"
+      ],
+      "refined_path": "research/localization_dev_v2/hydrogen_refined/Vandalism042_x264.mp4.json",
+      "refined_intervals_seconds": [
+        [
+          66.0,
+          103.0
+        ]
+      ],
+      "intervals_seconds": [
+        [
+          66.0,
+          103.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "uncertainty": "+/- 1.0s based on 0.5s (2 fps) boundary frames and digital zoom transition.",
+      "observable_event_note": "After crossing from the street with a spray can (64.5s-65.5s), a youth in a cap and plaid shorts reaches the right wall at 66s and repeatedly reaches/crouches to spray-paint the surface through 102.5s before straightening and turning away at 103s.",
+      "normal_context_before_after": "0s-65.5s shows pedestrians, traffic, conversation in the roadway, and approaching the sidewalk; 103s-119s shows a zoom replay turning away with the can and walking out of frame.",
+      "uncertain_event_identity": "Digital zoom edit at 103.0s-106.0s slows/replays the stop transition.",
+      "changes_and_reasons": "Confirmed 66s-103s unchanged: boundary_00 shows approach at t=65.50s and first arm lift to the wall at t=66.00s, continuing spraying at t=102.50s, and straightening up/turning away as the digital zoom starts at t=103.00s.",
+      "reviewed": true,
+      "repo_path": "videos/Vandalism/Vandalism042_x264.mp4",
+      "intervals": [
+        [
+          1981,
+          3090
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Visible wall-spraying retained; preparation, walking and post-action exit excluded; digital zoom/replay does not reset video timeline.",
+      "evidence": [
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Vandalism042_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Vandalism042_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Vandalism042_x264.mp4.json",
+      "hydrogen_final_sha256": "069d6815725ae31b57453743626d4567bdb3e46f4c594a3b7cc719ea0e8dcd37"
+    },
+    {
+      "name": "Arrest041_x264.mp4",
+      "source_sha256": "0724c7164ddb90aed6d7a68d6f5fac7c2cc134e3704acda9b07bfdff30828034",
+      "fps": 30.0,
+      "n_frames": 3847,
+      "native_video_accepted": true,
+      "native_tool_evidence": {
+        "tool": "read_file",
+        "path": "review_evidence/Arrest041_x264.mp4",
+        "sampled_rate": "1 fps",
+        "sampled_frames": 128,
+        "timestamp_range": "00:00-02:07"
+      },
+      "overview_evidence": [
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_02.jpg"
+      ],
+      "boundary_evidence": [
+        "results/localization_dev_v2/boundary_review/Arrest041_x264.mp4/boundary_00.jpg"
+      ],
+      "refined_path": "research/localization_dev_v2/hydrogen_refined/Arrest041_x264.mp4.json",
+      "refined_intervals_seconds": [
+        [
+          16.0,
+          24.0
+        ],
+        [
+          78.0,
+          90.0
+        ]
+      ],
+      "intervals_seconds": [
+        [
+          16.0,
+          24.0
+        ],
+        [
+          78.0,
+          90.0
+        ]
+      ],
+      "boundary_uncertainty_seconds": 1.0,
+      "uncertainty": "+/- 1.0s based on 0.5s (2 fps) boundary frames; unresolved start choice between 78s step-in and 86s physical pull.",
+      "observable_event_note": "Episode 1 (16s-24s): officer opens store door at 16s with weapon drawn, confronts entering individual, glass shatters, individual falls across threshold, and officer steps back at 24s. Episode 2 (78s-90s): officers step closely around the individual (78s) and pull them inside, clearing the doorway at 90s.",
+      "normal_context_before_after": "0s-15.5s shows closed entrance; 24.5s-77.5s shows static doorway containment, flashlight monitoring, and bystander evacuation; 90.5s-127s shows post-custody checks, aisle view, and logo.",
+      "uncertain_event_identity": "Unresolved boundary judgment on Episode 2 start: 78s marks officers stepping directly over/around the individual to initiate extraction, whereas physical dragging begins around 86s.",
+      "changes_and_reasons": "Confirmed [16.0, 24.0] and [78.0, 90.0] unchanged in boundary_00: door opens at t=16.00s, doorway clears at t=24.00s, close step-in begins at t=78.00s, and extraction completes inside the threshold at t=90.00s.",
+      "reviewed": true,
+      "repo_path": "videos/Arrest/Arrest041_x264.mp4",
+      "intervals": [
+        [
+          481,
+          720
+        ],
+        [
+          2341,
+          2700
+        ]
+      ],
+      "reviewer": "Codex independent visual audit of all timestamped overview and 2fps boundary sheets",
+      "review_notes": "Separate acute doorway confrontation from later physical custody; static doorway and routine attendance excluded.",
+      "evidence": [
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_00.jpg",
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_01.jpg",
+        "results/localization_dev_v2/review/Arrest041_x264.mp4/overview_02.jpg",
+        "results/localization_dev_v2/boundary_review/Arrest041_x264.mp4/boundary_00.jpg"
+      ],
+      "hydrogen_final_source": "research/localization_dev_v2/hydrogen_final/Arrest041_x264.mp4.json",
+      "hydrogen_final_sha256": "058efc5585c3c9f8fa2549369a7e8c675bf90b3656d14fd005cdca5e7c006a7b"
+    }
+  ],
+  "authoritative_manifest_sha256": "ae491a4569ad9367ac07cfdee776a0c845087d806f5bb51afb056963383e7182",
+  "excluded_non_validation_drafts": [
+    "Arson048_x264.mp4",
+    "Arson046_x264.mp4",
+    "Arson040_x264.mp4",
+    "RoadAccidents035_x264.mp4",
+    "RoadAccidents069_x264.mp4",
+    "Vandalism020_x264.mp4",
+    "Shooting031_x264.mp4",
+    "Robbery147_x264.mp4",
+    "Robbery105_x264.mp4"
+  ]
+}
