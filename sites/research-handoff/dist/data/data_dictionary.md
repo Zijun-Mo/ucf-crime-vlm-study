@@ -1,6 +1,6 @@
 # 结果数据字典
 
-数据快照：2026-11-15，18个正式条件。JSON／CSV指标保持[0,1]；网页显示百分比。差值网页显示百分点(pp)。不存在的单视频指标为null，不将全正常或全异常视频的定位指标记作0。
+数据快照覆盖20个正式条件，其中18个原有条件于2026-11-15冻结，两项E9消融于2026-11-20完成。JSON／CSV指标保持[0,1]；网页显示百分比。差值网页显示百分点(pp)。不存在的单视频指标为null，不将全正常或全异常视频的定位指标记作0。
 
 - summary.json / summary.csv：统一条件ID、中文标签、模型、规模、方法、提示词、窗口时长、10项指标及区间。主表展示其中6项。
 - test_videos.json：固定290视频的name、category、label、fps、n_frames、intervals及源视频SHA。intervals是官方1-based闭区间；[-1,-1]无效，截断到实际末帧。
@@ -25,3 +25,5 @@ within_macro_auroc / within_macro_ap：对140个混合标签视频分别算AUROC
 AUROC并列给0.5；AP使用sklearn average_precision_score的阶梯积分口径。bootstrap每次抽290个视频，所有方法共用同一抽样权重；Macro只对抽中有效混合视频重新归一化。
 
 所有曲线的min–max仅为显示；图形分桶保留极值，不参与正式计算。教师软标签由sigmoid(完整教师logits)逐异常视频min–max得到；它是训练目标，不能与显示归一化或测试逐帧重建混淆。
+
+消融逐窗口分数使用同一预测格式。`data/analysis/e9_ablation.json` 保存同一290视频上的点估计、与 E9 的配对区间及按负帧来源分解，`e9_ablation_protocol.json` 记录消融定义和匹配抽样的哈希。

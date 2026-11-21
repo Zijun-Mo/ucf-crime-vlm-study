@@ -95,6 +95,7 @@ def run_localization(runtime,manifest,provider,out,deadline,policy,phase='prepar
     if phase=='train' and not dev:raise ValueError('Training requires real reviewed temporal development labels')
     fingerprint=digest(dict(manifest=manifest,policy=policy))
     soft=policy['loss'].get('kind')=='pointwise_minmax_soft_v4'
+    ablation=policy.get('e9_ablation')
     frame_selection=soft or policy['loss'].get('kind')=='pointwise_focal_v3'
     focal=policy['loss'].get('kind')=='pointwise_focal_v3'
     pointwise=policy['loss'].get('kind') in ['pointwise_teacher_v2','pointwise_focal_v3','pointwise_minmax_soft_v4']
@@ -143,6 +144,9 @@ def run_localization(runtime,manifest,provider,out,deadline,policy,phase='prepar
             rng_restored=True,continuation_id=continuation['id']))
     if frame_selection and state['steps']==0:
         state.setdefault('initial_tensor_sha256',tensor_digest(trainable_state(runtime.model,runtime.head)))
+    if ablation:
+        assert soft and not continuation
+        assert state['initial_tensor_sha256']==ablation['initial_tensor_sha256'], 'E9 LoRA initialization mismatch'
     teacher_dir=out/'teacher';teacher_dir.mkdir(exist_ok=True)
     selections_dir=out/'selection';selections_dir.mkdir(exist_ok=True)
     def guard(reserve=300):
@@ -190,14 +194,16 @@ def run_localization(runtime,manifest,provider,out,deadline,policy,phase='prepar
                         fingerprint=fingerprint,windows=len(z),logits=z,seconds=time.time()-started,
                         teacher='pinned_zero_shot_adapter_disabled'))
                 state.update(teacher_videos=index+1,active_video=record['name'])
-                if (index+1)%5==0 and not continuation:persist()
-        if continuation:persist()
+                if (index+1)%5==0 and not (continuation or ablation):persist()
+        if continuation or ablation:persist()
         reference=normal_reference([read_teacher(r) for r in train if not r['label']],policy['selection']['normal_quantile'])
         atomic_json(out/'normal_reference.json',reference)
         counts=[]
         for record in train:
             if not record['label']:continue
-            chosen=(soft_targets(read_teacher(record),1,policy['loss']['minimum_probability_range']) if soft
+            chosen=(soft_targets(read_teacher(record),1,policy['loss']['minimum_probability_range'],
+                mode=ablation['target_mode'] if ablation else 'minmax', name=record['name'],
+                seed=policy['training']['seed']) if soft
                 else (focal_select if focal else selection)(read_teacher(record),reference,policy['selection']))
             atomic_json(selections_dir/(record['name']+'.json'),chosen)
             counts.append(dict(name=record['name'],**chosen['summary']))
@@ -359,7 +365,7 @@ def run_localization(runtime,manifest,provider,out,deadline,policy,phase='prepar
                 if measured>policy['resources']['epoch_max_hours']:
                     state.update(status='speed_gate_stopped',stage='held',reason='Measured epoch exceeded user three-hour limit')
                     break
-            if epoch+1>=policy['training']['min_epochs'] and state['bad_epochs']>=policy['training']['patience']:
+            if not ablation and epoch+1>=policy['training']['min_epochs'] and state['bad_epochs']>=policy['training']['patience']:
                 state.update(status='complete',stage='finished',stop_reason='localization_validation_plateau');break
         else:state.update(status='budget_complete',stage='finished',stop_reason='fixed_epoch_limit_not_convergence')
         state['frozen_parameters_unchanged']=all(p._version==version for p,version in frozen)

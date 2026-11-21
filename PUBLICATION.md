@@ -3,7 +3,7 @@
 This repository starts with a clean publication commit. Private local Git history is not included.
 
 Included: scientific Python source and tests, historical workers, fixed experiment protocols,
-the portable research website, all 18 accepted prediction conditions, teacher/development
+the portable research website, all 20 accepted prediction conditions (including two E9 ablations), teacher/development
 results, statistical analyses, checkpoint hashes and selected small public-dataset illustrations.
 
 Excluded: original videos, model weights, visual feature caches, cloud inventories, Colab

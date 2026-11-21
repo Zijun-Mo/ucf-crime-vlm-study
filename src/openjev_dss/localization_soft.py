@@ -12,17 +12,28 @@ from .localization_backward import padded_forward
 from .localization_pointwise import subset
 
 
-def targets(values, label, minimum_range=1e-12):
+def targets(values, label, minimum_range=1e-12, *, mode='minmax', name=None, seed=42):
     z=np.asarray(values,dtype=np.float64).reshape(-1)
     if not len(z) or not np.isfinite(z).all():raise ValueError('Invalid complete teacher logits')
     p=torch.sigmoid(torch.as_tensor(z)).numpy()
     span=float(np.ptp(p));active=not label or span>minimum_range
     y=(p-p.min())/span if label and active else np.zeros(len(z))
+    if mode not in {'minmax', 'permuted_minmax', 'raw_probability'}:
+        raise ValueError(f'Unknown soft target mode: {mode}')
+    if label and active and mode == 'permuted_minmax':
+        if not name:
+            raise ValueError('Video identity required for fixed target permutation')
+        # Independent stream: this cannot affect the student window sampler.
+        import hashlib
+        key = hashlib.sha256(f'{seed}:e9-target-permutation:{name}'.encode()).digest()
+        y = y[np.random.default_rng(int.from_bytes(key[:8], 'little')).permutation(len(y))]
+    elif label and active and mode == 'raw_probability':
+        y = p
     return dict(targets=y.tolist(),active=active,teacher_probability_min=float(p.min()),
         teacher_probability_max=float(p.max()),probability_range=span,
         summary=dict(windows=len(z),positive_windows=int((y>0).sum()),
             mean_target=float(y.mean()),abstained=not active),
-        provenance='frozen full-video sigmoid teacher scores; min-max only; no temporal smoothing')
+        provenance=f'frozen full-video sigmoid teacher scores; {mode}; no temporal smoothing')
 
 
 def terms(logits, labels, coefficients):

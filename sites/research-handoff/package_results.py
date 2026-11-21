@@ -20,8 +20,8 @@ def main():
     out=DIST/'downloads';out.mkdir(exist_ok=True)
     entries=[]
     specs=[
-        ('all-results.zip','完整结果资料包','18条件、逐视频及窗口分数、教师与开发结果、图表、历史和CPU复算入口。',payload),
-        ('test-results.zip','正式测试与配对统计','18条件的完整窗口分数、逐视频指标、时间元数据、配置来源和配对比较。',[p for p in payload if p.relative_to(DIST).as_posix().startswith(('data/predictions/','data/reports/','data/per_video/','data/statistics/','data/provenance/')) or p.name in ['summary.csv','summary.json','per_video.csv','test_videos.json','comparisons.json','data_dictionary.md','protocol.json']]),
+        ('all-results.zip','完整结果资料包','20条件、逐视频及窗口分数、教师与开发结果、图表、历史和CPU复算入口。',payload),
+        ('test-results.zip','正式测试与配对统计','20条件的完整窗口分数、逐视频指标、时间元数据、配置来源和配对比较。',[p for p in payload if p.relative_to(DIST).as_posix().startswith(('data/predictions/','data/reports/','data/per_video/','data/statistics/','data/provenance/')) or p.name in ['summary.csv','summary.json','per_video.csv','test_videos.json','comparisons.json','data_dictionary.md','protocol.json','e9_ablation.json','e9_ablation_protocol.json']]),
         ('training-development.zip','训练、教师与开发集','1419份冻结教师分数，九轮开发预测和指标、近似时间标注、科学配置与选模记录。',[p for p in payload if p.relative_to(DIST).as_posix().startswith('data/training/')]),
         ('figures-analysis.zip','图表与案例证据','可直接用于报告的PNG／SVG、固定案例画面、迁移分解和分层数据。',[p for p in payload if p.relative_to(DIST).as_posix().startswith(('assets/','data/analysis/'))]),
         ('historical-results.zip','历史结果附录','早期步长、MIL／DSS结果及报告；协议与当前正式条件不同，单独保留。',[p for p in payload if p.relative_to(DIST).as_posix().startswith('data/history/')]),

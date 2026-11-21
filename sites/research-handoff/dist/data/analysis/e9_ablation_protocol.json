@@ -1,0 +1,1 @@
+{"arms":{"a":"permuted_minmax","b":"raw_probability"},"epochs":9,"updates":1413,"confirmatory_checkpoint":"epoch 9 of each arm; fixed update count","sampling_plan_sha256":"ed9724d3c981e083225dfa53466bff79df9eee8db3398ccfc9c597c5a02bcc9f","matched_training_videos":1256,"active_anomaly_videos":639,"bootstrap":{"unit":"video","replicates":1000,"seed":42}}

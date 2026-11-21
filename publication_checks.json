@@ -19,5 +19,15 @@
     "findings": 0,
     "scope": "public tracked text files; credential, personal identifier, private resource patterns"
   },
-  "source_history": "new clean snapshot; original history excluded"
+  "source_history": "new clean snapshot; original history excluded",
+  "e9_ablation_release": {
+    "formal_conditions": 20,
+    "manifest_files": 4243,
+    "max_point_error": 0.0,
+    "paired_resamples_per_ablation": 1000,
+    "paired_ci_recomputation_passed": true,
+    "privacy_scan_findings": 0,
+    "optimizer_updates_per_checkpoint": 1413,
+    "test_videos_per_condition": 290
+  }
 }
